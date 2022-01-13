@@ -9,6 +9,7 @@ import PropsClassHi from './components/PropsClassHi';
 import StateClassHi from './components/StatesClassHi';
 import SetStateCounter from './components/SetStateCounter';
 import EventHandlingClick from './components/EventHandlingClick';
+import ClassEventClick from './components/ClassEventClick';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
       <StateClassHi/>
       <SetStateCounter/>
       <EventHandlingClick/>
+      <ClassEventClick/>
     </div>
   );
 }
