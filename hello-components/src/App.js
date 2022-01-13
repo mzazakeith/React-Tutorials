@@ -7,6 +7,7 @@ import Hi from './components/Hi';
 import PropsHi from './components/PropsHi';
 import PropsClassHi from './components/PropsClassHi';
 import StateClassHi from './components/StatesClassHi';
+import SetStateCounter from './components/SetStateCounter';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <PropsClassHi Name="max" HeroName="wonder woman"></PropsClassHi>
       <PropsClassHi Name="stark" HeroName="ironman"></PropsClassHi>
       <StateClassHi/>
+      <SetStateCounter/>
     </div>
   );
 }
