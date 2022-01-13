@@ -8,6 +8,7 @@ import PropsHi from './components/PropsHi';
 import PropsClassHi from './components/PropsClassHi';
 import StateClassHi from './components/StatesClassHi';
 import SetStateCounter from './components/SetStateCounter';
+import EventHandlingClick from './components/EventHandlingClick';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <PropsClassHi Name="stark" HeroName="ironman"></PropsClassHi>
       <StateClassHi/>
       <SetStateCounter/>
+      <EventHandlingClick/>
     </div>
   );
 }
