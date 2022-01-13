@@ -5,18 +5,23 @@ import Welcome from './components/Welcome';
 import Hello from './components/Hello';
 import Hi from './components/Hi';
 import PropsHi from './components/PropsHi';
+import PropsClassHi from './components/PropsClassHi';
 
 function App() {
   return (
     <div className="App">
-      <Greet/>
       <Welcome></Welcome>
+      <Greet/>
       <Hello/>
       <Hi/>
-      <PropsHi name="Bruce" HeroName="chicken man">
+      <PropsHi Name="Bruce" HeroName="chicken man">
         <p>This is children props</p>
       </PropsHi>
-      <PropsHi name="Lynne" HeroName="wonder woman"/>
+      <PropsHi Name="Lynne" HeroName="supergirl">
+        <button>Action</button>
+      </PropsHi>
+      <PropsClassHi Name="max" HeroName="wonder woman"></PropsClassHi>
+      <PropsClassHi Name="stark" HeroName="ironman"></PropsClassHi>
     </div>
   );
 }
