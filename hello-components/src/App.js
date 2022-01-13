@@ -13,7 +13,9 @@ function App() {
       <Welcome></Welcome>
       <Hello/>
       <Hi/>
-      <PropsHi name="Bruce" HeroName="chicken man"/>
+      <PropsHi name="Bruce" HeroName="chicken man">
+        <p>This is children props</p>
+      </PropsHi>
       <PropsHi name="Lynne" HeroName="wonder woman"/>
     </div>
   );

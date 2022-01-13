@@ -2,7 +2,10 @@ import React from 'react'
 
 
 const PropsHi = (props) => {
-  return <h1>Hello Mzaza {props.name} aka {props.HeroName}</h1>
+  return (
+    <div>
+      <h1>Hello {props.name} aka {props.HeroName}</h1> {props.children}
+    </div>)
 }
 
 export default PropsHi
