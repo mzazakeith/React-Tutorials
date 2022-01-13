@@ -2,7 +2,7 @@ import React from "react";
 
 const Hello = () => {
     return (
-        <div>
+        <div className="dummyClass">
             <h1>JSX Hello Mzaza</h1>
         </div>
     )
