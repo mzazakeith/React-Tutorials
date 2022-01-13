@@ -11,6 +11,7 @@ import SetStateCounter from './components/SetStateCounter';
 import EventHandlingClick from './components/EventHandlingClick';
 import ClassEventClick from './components/ClassEventClick';
 import Eventbind from './components/Eventbind';
+import ParentComponent from './components/ParentComponent';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
       <EventHandlingClick/>
       <ClassEventClick/>
       <Eventbind/>
+      <ParentComponent/>
     </div>
   );
 }
