@@ -4,6 +4,7 @@ import Greet from './components/Greet'
 import Welcome from './components/Welcome';
 import Hello from './components/Hello';
 import Hi from './components/Hi';
+import PropsHi from './components/PropsHi';
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
       <Welcome></Welcome>
       <Hello/>
       <Hi/>
+      <PropsHi name="Bruce" HeroName="chicken man"/>
+      <PropsHi name="Lynne" HeroName="wonder woman"/>
     </div>
   );
 }
