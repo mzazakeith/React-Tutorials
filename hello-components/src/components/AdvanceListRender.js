@@ -1,4 +1,5 @@
 import React from 'react'
+import Person from './Person'
 
 function AdvanceListRender() {
     const persons = [
@@ -21,11 +22,7 @@ function AdvanceListRender() {
             skill:'fotran'
         }
     ]
-    const personList = persons.map(person => (
-        <h3>
-            I am {person.name}. I am {person.age} years old. I am good at {person.skill}
-        </h3>
-    ))
+    const personList = persons.map(person => <Person person={person}></Person>)
     return<div>{personList}</div>
 }
 
