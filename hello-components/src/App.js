@@ -12,6 +12,7 @@ import EventHandlingClick from './components/EventHandlingClick';
 import ClassEventClick from './components/ClassEventClick';
 import Eventbind from './components/Eventbind';
 import ParentComponent from './components/ParentComponent';
+import UserGConditionalRendering from './components/UserGConditionalRendering';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
       <ClassEventClick/>
       <Eventbind/>
       <ParentComponent/>
+      <UserGConditionalRendering/>
     </div>
   );
 }
