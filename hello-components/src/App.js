@@ -14,6 +14,7 @@ import Eventbind from './components/Eventbind';
 import ParentComponent from './components/ParentComponent';
 import UserGConditionalRendering from './components/UserGConditionalRendering';
 import ListRendering from './components/ListRendering';
+import AdvanceListRender from './components/AdvanceListRender';
 
 function App() {
   return (
@@ -38,6 +39,8 @@ function App() {
       <ParentComponent/>
       <UserGConditionalRendering/>
       <ListRendering/>
+      <AdvanceListRender/>
+
     </div>
   );
 }
