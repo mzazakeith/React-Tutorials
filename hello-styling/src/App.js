@@ -1,4 +1,5 @@
 import './App.css';
+import Inline from './components/Inline';
 import Stylesheet from './components/Stylesheet';
 
 
@@ -10,6 +11,8 @@ function App() {
 
       {/* method 2 */}
       <Stylesheet primary={true}/>
+
+      <Inline/>
     </div>
   );
 }
