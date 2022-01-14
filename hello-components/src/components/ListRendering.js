@@ -2,7 +2,8 @@ import React from 'react'
 
 function ListRendering() {
     const names = ['Mzaza', 'Max', 'Manu']
-    const nameList = names.map(name => <h2>{name}</h2>)
+    // remember not a good idea to use index as key
+    const nameList = names.map((name,index) => <h2 key={index}>{name}</h2>) 
     return <div>{nameList}</div>
 }
 
