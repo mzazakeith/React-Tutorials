@@ -8,6 +8,12 @@ function TestComponent() {
         document.title= `${count}`
          console.log("Use effect hook ran")
      },[count]);
+
+     useEffect(()=>{
+         localStorage.setItem("darkMode", darkMode)
+         console.log(" dark mode hook ran")
+     },[darkMode])
+
     return (
         <div>
             <h1>Test Component</h1>
