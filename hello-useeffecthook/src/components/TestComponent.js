@@ -7,7 +7,7 @@ function TestComponent() {
     useEffect(()=> {
         document.title= `${count}`
          console.log("Use effect hook ran")
-     });
+     },[count]);
     return (
         <div>
             <h1>Test Component</h1>
