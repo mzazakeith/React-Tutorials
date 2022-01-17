@@ -4,15 +4,23 @@ function TestComponent() {
     const [count, setCount] = useState(0);
     const [darkMode, setDarkMode] = useState(false);
 
-    useEffect(()=> {
-        document.title= `${count}`
-         console.log("Use effect hook ran")
-     },[count]);
+    // useEffect(()=> {
+    //     document.title= `${count}`
+    //      console.log("Use effect hook ran")
+    //  },[count]);
 
-     useEffect(()=>{
-         localStorage.setItem("darkMode", darkMode)
-         console.log(" dark mode hook ran")
-     },[darkMode])
+    //  useEffect(()=>{
+    //      localStorage.setItem("darkMode", darkMode)
+    //      console.log(" dark mode hook ran")
+    //  },[darkMode])
+
+    useEffect(()=> {
+        const myTimer = setTimeout (()=>{
+            alert("hello")
+            console.log(" alert Use effect hook ran")
+        },5000);
+        return () => clearTimeout(myTimer);
+     },[count]);
 
     return (
         <div>
