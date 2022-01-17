@@ -5,6 +5,8 @@ function TestComponent() {
     const [count, setCount] = useState(0);
     const [darkMode, setDarkMode] = useState(false);
     const [posts, setPost]= useState([]);
+    const [search, setSearch]= useState("");
+    const [breweries, setBreweries]=useState([])
     // useEffect(()=> {
     //     document.title= `${count}`
     //      console.log("Use effect hook ran")
@@ -23,14 +25,23 @@ function TestComponent() {
     //     return () => clearTimeout(myTimer);
     //  },[count]);
 
-    useEffect(()=> {
+    // useEffect(()=> {
+    //     const fetchData = async () => {
+    //         const results = await axios.get("https://jsonplaceholder.typicode.com/posts");
+    //         setPost(results.data);
+    //         console.log(results.data)
+    //     };
+    //     fetchData()
+    //  },[]);
+
+     useEffect(()=> {
         const fetchData = async () => {
-            const results = await axios.get("https://jsonplaceholder.typicode.com/posts");
-            setPost(results.data);
-            console.log(results.data)
+            const results = await axios.get(`https://api.openbrewerydb.org/breweries/search?query=${search}`);
+            setBreweries(results.data)
+            // console.log(results.data)
         };
         fetchData()
-     },[]);
+     },[search]);
 
 
 
@@ -40,6 +51,10 @@ function TestComponent() {
             {count}
             <button onClick={()=>setCount(state => state+1 )}>Increase</button>
             <button onClick={()=>setDarkMode(state => !state )}>Toggle moode</button>
+            <input value={search} onChange={ (e) => setSearch(e.target.value)} type='text'/>
+            {breweries.map((brewery) => {
+                return <h2 key={brewery.id}>{brewery.name}</h2>
+            })}
         </div>
     )
 }
