@@ -1,5 +1,5 @@
 import store from './store'
-import {bugAdded, bugRemoved} from './actions'
+import {bugAdded, bugRemoved, bugResolved} from './actions'
 
 
 store.subscribe(()=>{
@@ -8,7 +8,8 @@ store.subscribe(()=>{
 
 store.dispatch(bugAdded("New Bug"))
 store.dispatch(bugAdded("New Bug 2"))
-store.dispatch(bugRemoved(1))
+// store.dispatch(bugRemoved(1))
+store.dispatch(bugResolved(2))
 
 
 console.log(store.getState())
