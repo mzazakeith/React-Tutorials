@@ -59,3 +59,14 @@ console.log(removed)
 
 const updating = numbers.map(n => n===2 ? 20 : n)
 console.log(updating)
+
+
+let book = {title:"Harry potter"}
+
+function publish(book){
+    book.isPublished = true;
+}
+
+publish(book);
+
+console.log(book)
