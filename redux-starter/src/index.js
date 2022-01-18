@@ -1,4 +1,5 @@
 import {compose , pipe} from 'lodash/fp'; 
+import {Map, map} from 'immutable';
 
 let input = "  Javascript   "
 
@@ -61,12 +62,17 @@ const updating = numbers.map(n => n===2 ? 20 : n)
 console.log(updating)
 
 
-let book = {title:"Harry potter"}
+// immutability
+
+// using immutable
+
+let book = Map({title:"Harry potter"});
 
 function publish(book){
-    book.isPublished = true;
+    return book.set("isPublished",true)
 }
 
-publish(book);
+book = publish(book);
 
-console.log(book)
+// console.log(book.get("title"))
+console.log(book.toJS())
