@@ -1,4 +1,5 @@
 import {compose , pipe} from 'lodash/fp'; 
+import {produce} from 'immer';
 
 
 let input = "  Javascript   "
@@ -64,13 +65,17 @@ console.log(updating)
 
 // immutability
 
-let book = Map({title:"Harry potter"});
+// using immer
+
+let book = {title:"Harry potter"};
 
 function publish(book){
-    return book.set("isPublished",true)
+    return produce(book,draftBook => {
+        draftBook.isPublished = true;
+    });
 }
 
-book = publish(book);
+let updatedBook = publish(book);
 
-// console.log(book.get("title"))
-console.log(book.toJS())
+console.log(book);
+console.log(updatedBook);
