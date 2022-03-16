@@ -14,12 +14,20 @@ import {
 } from 'react-native';
 
 import {useDimensions, useDeviceOrientation} from "@react-native-community/hooks";
+import axios from "axios";
+import {useState} from "react";
 
 
 export default function App() {
     // console.log(Dimensions.get('screen'))
     // console.log(useDeviceOrientation());
     // const {landscape} = useDeviceOrientation();
+    const callApi = () =>{
+        axios.get(`https://jsonplaceholder.typicode.com/users`, )
+            .then(res => {
+                console.log(res.data);
+            })
+    }
     return (
         //safe are view is ios only
 
@@ -131,6 +139,8 @@ export default function App() {
                 width: 100,
                 height: 100
             }}>
+         <Button title="Click me"
+              onPress={callApi}/>
 
             </View>
         </SafeAreaView>
