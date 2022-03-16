@@ -1,10 +1,10 @@
-import {StyleSheet, Text, View,Platform, StatusBar} from 'react-native';
-import CarItem from "./components/CarItem/";
+import {StyleSheet, View,Platform, StatusBar} from 'react-native';
+import CarsList from "./components/CarsList";
 
 export default function App() {
     return (
         <View style={styles.container}>
-            <CarItem type="Model S" tagline='Order now for Touchless Delivery' image={require('./assets/images/ModelS.jpeg')}/>
+           <CarsList/>
         </View>
     );
 }
