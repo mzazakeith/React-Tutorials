@@ -4,18 +4,17 @@ import styles from "./styles";
 import cars from "./cars";
 import CarItem from "../CarItem";
 
-const carList = (props) =>{
-    let x = 0;
+const carList = () =>{
     return(
         <View style={styles.carContainer}>
             <FlatList
                 data={cars}
                 renderItem={({item}) => {
-                    x ++;
                     return(
-                        <CarItem car={item} key={x}/>
+                        <CarItem car={item}/>
                     )
                 }}
+                keyExtractor={(item, index) => index.toString()}
                 showsVerticalScrollIndicator={false}
                 snapToAlignment={'start'}
                 decelerationRate={'fast'}
